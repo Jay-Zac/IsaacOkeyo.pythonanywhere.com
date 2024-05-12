@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+{%block title%}Web Development{%endblock%}
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{%url 'index'%}">ISAAC OKEYO</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+                data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="{%url 'index'%}" class="nav-link"><span>Home</span></a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(/media/background_images/2.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+                <h2><span>Web Development</span></h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="mt-6 container text-white">
+        <p class="py-4"><strong>"Welcome</strong>
+            to the realm of cutting-edge web development, where innovation meets functionality,
+            and your digital dreams come to life! Meet Isaac Omwenga Okeyo, your go-to Python-Django
+            wizard with a knack for crafting dynamic online experiences.
+        </p>
+
+        <p class="py-2">With a proven track record of deploying top-notch websites on platforms like PythonAnywhere
+            and Truehost, I bring a blend of expertise and passion to every project. But it's not just about launching
+            websites – it's about creating immersive online journeys that captivate users and leave a lasting
+            impression.
+        </p>
+
+        <p class="py-2">I thrive on challenges and am constantly pushing the boundaries of what's possible in web
+            development. Whether it's building sleek interfaces, optimizing back-end systems, or integrating
+            cutting-edge features, I'm here to turn your vision into a digital reality.</p>
+
+        <p class="py-2">So, whether you're a startup looking to make a splash or an established business ready to
+            elevate your online presence, let's team up and create something extraordinary. Together, we'll harness
+            the power of Django to craft user-friendly, high-impact web applications that stand out in the digital
+            landscape. Let's build something amazing – are you ready?"</p>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center ftco-animate">
+            <p><a href="{%url 'hire_me'%}"
+                  class="btn btn-primary py-4 px-5">Hire Me</a></p>
+        </div>
+    </div>
+</section>
+{%endblock%}
