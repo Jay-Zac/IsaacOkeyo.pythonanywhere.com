@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +8,67 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="{%static 'css/open-iconic-bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{%static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
-    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
-    <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
-    <link rel="stylesheet" href="{%static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 
-    <link rel="stylesheet" href="{%static 'css/aos.css'%}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 
-    <link rel="stylesheet" href="{%static 'css/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
 
-    <link rel="stylesheet" href="{%static 'css/flaticon.css'%}">
-    <link rel="stylesheet" href="{%static 'css/icomoon.css'%}">
-    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/x-icon" href="/media/background_images/back1.jpg"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .navbar-dark .navbar-toggler-icon {
+    color: #343a40;
+}
+
+.navbar-dark .navbar-toggler:focus,
+.navbar-dark .navbar-toggler:active,
+.navbar-dark .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand:hover {
+    color: #ffc107;
+}
+
+.navbar-dark .navbar-toggler span {
+    color: #fff;
+}
+
+    </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{%url 'index'%}">ISAAC OKEYO</a>
+        <a class="navbar-brand" href="{% url 'index' %}">ISAAC OKEYO</a>
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
                 data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
                 <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
@@ -40,54 +76,45 @@
                 <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
                 <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
                 <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-                <li class="nav-item"><a href="{%url 'my_works'%}" class="nav-link"><span>My Works</span></a></li>
+                <li class="nav-item"><a href="{% url 'my_works' %}" class="nav-link"><span>My Works</span></a></li>
                 <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
             </ul>
         </div>
     </div>
 </nav>
 <section id="home-section" class="mt-4 hero">
-    <div class="home-slider  owl-carousel">
-        <div class="slider-item ">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item">
             <div class="overlay"></div>
             <div class="container">
-                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-                     data-scrollax-parent="true">
-                    <div class="one-third js-fullheight order-md-last img"
-                         style="background-image:url(media/background_images/back1.jpg);">
+                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third js-fullheight order-md-last img" style="background-image:url(media/background_images/back1.jpg);">
                         <div class="overlay"></div>
                     </div>
-                    <div class="one-forth d-flex  align-items-center ftco-animate"
-                         data-scrollax=" properties: { translateY: '70%' }">
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
                             <span class="subheading">Hello!</span>
                             <h1 class="mb-4 mt-3">I'm <span>Isaac Omwenga Okeyo</span></h1>
                             <h2 class="mb-4">A Web Developer</h2>
-                            <p><a href="{%url 'hire_me'%}" class="btn btn-primary py-3 px-4">Hire me</a>
-                                <a href="{%url 'my_works'%}"
-                                   class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            <p><a href="{% url 'hire_me' %}" class="btn btn-primary py-3 px-4">Hire me</a>
+                                <a href="{% url 'my_works' %}" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="slider-item">
             <div class="overlay"></div>
             <div class="container">
-                <div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
-                     data-scrollax-parent="true">
-                    <div class="one-third js-fullheight order-md-last img"
-                         style="background-image:url(media/background_images/back2.jpg);">
+                <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third js-fullheight order-md-last img" style="background-image:url(media/background_images/back2.jpg);">
                         <div class="overlay"></div>
                     </div>
-                    <div class="one-forth d-flex align-items-center ftco-animate"
-                         data-scrollax=" properties: { translateY: '70%' }">
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
-                            <h1 class="mb-4 mt-3">I'm a <span>web developer</span> based in Mombasa, Kenya</h1>
-                            <p><a href="{%url 'hire_me'%}" class="btn btn-primary py-3 px-4">Hire me</a>
-                                <a href="{%url 'my_works'%}" class="btn btn-white btn-outline-white py-3 px-4">My
-                                    works</a></p>
+                            <h1 class="mb-4 mt-3">I'm  <span>based in Kenya</span> </h1>
+                            <p><a href="{% url 'hire_me' %}" class="btn btn-primary py-3 px-4">Hire me</a>
+                                <a href="{% url 'my_works' %}" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
                         </div>
                     </div>
                 </div>
@@ -521,9 +548,19 @@
 <script src="{%static 'js/aos.js'%}"></script>
 <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
 <script src="{% static 'js/scrollax.min.js'%}"></script>
-
 <script src="{%static 'js/main.js'%}"></script>
-
+<script>
+$(document).ready(function(){
+    $('.nav-link').on('click', function(){
+        $('#ftco-nav').collapse('hide');
+    });
+});
+</script>
 </body>
 </html>
+
+
+
+
+
 
