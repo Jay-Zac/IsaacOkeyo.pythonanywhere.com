@@ -23,6 +23,43 @@
     <link rel="stylesheet" href="{%static 'css/icomoon.css'%}">
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
     <link rel="icon" type="image/x-icon" href="/media/background_images/back1.jpg"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .navbar-dark .navbar-toggler-icon {
+    color: #343a40;
+}
+
+.navbar-dark .navbar-toggler:focus,
+.navbar-dark .navbar-toggler:active,
+.navbar-dark .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand:hover {
+    color: #ffc107;
+}
+
+.navbar-dark .navbar-toggler span {
+    color: #fff;
+}
+
+    </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -40,10 +77,12 @@
             </ul>
         </div>
     </div>
-</nav>
+    </nav>
+
 {%block content%}
 
 {%endblock%}
+
 <footer id="contact-section" class="ftco-footer ftco-section">
     <div class="container">
         <div class="row mb-5">
@@ -142,6 +181,13 @@
 <script src="{% static 'js/scrollax.min.js'%}"></script>
 
 <script src="{%static 'js/main.js'%}"></script>
+<script>
+    $(document).ready(function(){
+        $('.nav-link').on('click', function(){
+            $('#ftco-nav').collapse('hide');
+        });
+    });
+</script>
 
 </body>
 </html>
